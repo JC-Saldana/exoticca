@@ -8,8 +8,14 @@ import "./styles.scss"
 
 export default function CustomCarousel({ children }: Props) {
 
+    const leftArrow = (
+        <button className="arrow left">
+            {`<`}
+        </button>
+    )
+
     const rightArrow = (
-        <button className="arrow">
+        <button className="arrow right">
             {`>`}
         </button>
     )
@@ -21,7 +27,7 @@ export default function CustomCarousel({ children }: Props) {
             transition={0.8}
             swiping={true}
             dynamic={true}
-            leftArrow={rightArrow}
+            leftArrow={leftArrow}
             rightArrow={rightArrow}>
             {children}
         </Carousel>

@@ -12,9 +12,10 @@ Fount this header :D -> x-recruitment: Cool developers inside, but we need some 
 - Styled components: to create reusable react components with its own styles (never used before :D)
 
 // To improve
+- Tried testing, but Enzyme seems to be deprecated in React 18, so React Testing Library is recommended
+- Data fetch: everything is extracted at the same time from mocked JSON
 - Protected routes if user auth is needed.
 - Global imports setup with vite.
-- Data fetch: everything is extracted at the same time from mocked JSON
 
 // To consider
 - The tech is overkill and with lots of boilerplate. It was developed in this way so that it's highly scalable and easy to maintain.

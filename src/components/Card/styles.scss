@@ -2,6 +2,7 @@
   width: 350px;
 }
 
+
 .title {
   font-size: 16px;
   color: rgb(34, 34, 34);
@@ -47,9 +48,40 @@
 }
 
 .card-footer {
-  padding: 0px 18px; 
+  padding: 0px 18px;
 }
 
 .from {
   color: rgb(73, 73, 73);
 }
+
+.card-container {
+  margin: 0px;
+}
+
+// Pending: adjust card size width to device
+
+/* $breakpoint-mobile: 420px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+@media (min-width: $breakpoint-mobile) {
+  .card-container {
+    width: 200px;
+  }
+
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .card-container {
+    width: 250px;
+  }
+
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .card-container {
+    width: 320px;
+  }
+
+} */

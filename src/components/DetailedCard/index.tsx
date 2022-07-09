@@ -2,14 +2,29 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Link, useParams } from "react-router-dom"
 import { Button, Typography } from "@mui/material"
 import "./styles.scss"
+import { useSelector } from 'react-redux';
+import { RootState } from '../../main';
+import { useEffect, useState } from 'react';
+import Cards from '../../layouts/Cards/Cards';
+import { Container } from '@mui/system';
 export default function DetailedCard() {
+
     const { id, title, destination } = useParams()
-    console.log("title", title)
+    const { isLoading, cardsData } = useSelector((state: RootState) => state.cards)
+    const [suggestedCards, setSuggestedCards] = useState([])
+
+    useEffect(() => {
+        const filteredCards = [
+            ...cardsData.ca.cardsData[0].cards,
+            ...cardsData.uk.cardsData[0].cards,
+            ...cardsData.us.cardsData[0].cards,
+        ].filter(card => card.destination.includes(destination))
+        setSuggestedCards(filteredCards)
+    }, [id, cardsData])
+
     return (
-        <>
-            <div className="detailed-card">
-
-
+       <Container maxWidth="xl" className="detailed-card">
+            
                 <Typography gutterBottom variant="h4" className="header">
                     {title}
                     <Button variant="contained" component={Link} to="/" startIcon={<ArrowBackIosIcon />}>
@@ -17,8 +32,11 @@ export default function DetailedCard() {
                     </Button>
                 </Typography>
                 <p>{destination}</p>
-                <p><sub>{id}</sub></p>
-            </div>
-        </>
+                <p><sub>Id: {id}</sub></p>
+                <h3>Cards with same destination: </h3>
+                {suggestedCards.length ? <Cards cards={suggestedCards} isLoading={isLoading} /> :
+                    <h5>No cards with same destination</h5>}
+          
+            </Container>
     )
 }

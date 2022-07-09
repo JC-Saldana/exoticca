@@ -24,13 +24,16 @@ export const CardContent = styled.button`
 `
 
 export default function Card({ card }: Props) {
+
     const { id, destination, days, title, priceDetail: { fromPriceBeautify, oldPriceBeautify, pricingPercentage }, images } = card
+    const src = images[0].desktop
+
     return (
         <MaterialCard className='card-container'>
             <CardContent>
                 <Link to={`/DetailedCard/${id}/${destination}/${title}`} style={{ textDecoration: "none", color: "black" }}>
                     <div className="image-container">
-                        <img src={images[0].desktop} />
+                        <img src={src} />
                         <Typography className="destination" variant="body1" component="h6">
                             {destination}
                         </Typography>
