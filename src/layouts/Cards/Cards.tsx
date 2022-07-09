@@ -15,8 +15,6 @@ interface Props {
 
 export default function Cards({ cards, isLoading }: Props) {
 
-    //const matches = useMediaQuery("(min-width:1200px)")
-    console.log("cardsss", cards)
     return (
         <>
             {(!isLoading && cards) ?

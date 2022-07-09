@@ -23,13 +23,7 @@ export default function Home() {
 
     useEffect(() => {
         setCards(cardsData[country])
-        console.log("cards..", cardsData[country])
     }, [cardsData, country])
-
-
-    useEffect(() => {
-        console.log("here", cards)
-    }, [cards])
 
     return (
         <Container maxWidth="xl" className="container">

@@ -23,20 +23,18 @@ export default function DetailedCard() {
     }, [id, cardsData])
 
     return (
-       <Container maxWidth="xl" className="detailed-card">
-            
-                <Typography gutterBottom variant="h4" className="header">
-                    {title}
-                    <Button variant="contained" component={Link} to="/" startIcon={<ArrowBackIosIcon />}>
-                        Back
-                    </Button>
-                </Typography>
-                <p>{destination}</p>
-                <p><sub>Id: {id}</sub></p>
-                <h3>Cards with same destination: </h3>
-                {suggestedCards.length ? <Cards cards={suggestedCards} isLoading={isLoading} /> :
-                    <h5>No cards with same destination</h5>}
-          
-            </Container>
+        <Container maxWidth="xl" className="detailed-card">
+            <Typography gutterBottom variant="h4" className="header">
+                {title}
+                <Button variant="contained" component={Link} to="/" startIcon={<ArrowBackIosIcon />}>
+                    Back
+                </Button>
+            </Typography>
+            <p>{destination}</p>
+            <p><sub>Id: {id}</sub></p>
+            <h3>Cards with same destination: </h3>
+            {suggestedCards.length ? <Cards cards={suggestedCards} isLoading={isLoading} /> :
+                <h5>No cards with same destination</h5>}
+        </Container>
     )
 }
