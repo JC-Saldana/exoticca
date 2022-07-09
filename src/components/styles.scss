@@ -1,0 +1,36 @@
+.card-container {
+  width: 350px;
+}
+
+.title {
+  font-size: 16px;
+  color: rgb(34, 34, 34);
+  text-align: left;
+}
+
+.actual-price {
+  font-size: 24px;
+}
+
+.image-container {
+  position: relative;
+  color: #fff;
+
+  .destination {
+    position: absolute;
+    bottom: 40px;
+    left: 16px;
+    font-weight: bold;
+  }
+
+  .days {
+    position: absolute;
+    bottom: 20px;
+    left: 16px;
+    font-weight: bold;
+  }
+}
+
+.card-footer {
+  padding: 0px 18px; 
+}
