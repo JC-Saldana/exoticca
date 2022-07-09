@@ -1,7 +1,7 @@
 # Exoticca technical test 
 How to use: run "npm run dev" in the root folder, then open http://localhost:3000/ in your chosen explorer.
 
-Fount this header :D -> x-recruitment: Cool developers inside, but we need some more. Contact us at talent@exoticca.com and mention this header.
+Found this header :D -> x-recruitment: Cool developers inside, but we need some more. Contact us at talent@exoticca.com and mention this header.
 
 // Technologies used:
 - React: Base UI framework.
