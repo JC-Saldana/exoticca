@@ -16,6 +16,8 @@ Fount this header :D -> x-recruitment: Cool developers inside, but we need some 
 - Data fetch: everything is extracted at the same time from mocked JSON
 - Protected routes if user auth is needed.
 - Global imports setup with vite.
+- Cards suggested: remove duplicate destinations even if they have different prices
+- Many other minor changes...
 
 // To consider
 - The tech is overkill and with lots of boilerplate. It was developed in this way so that it's highly scalable and easy to maintain.

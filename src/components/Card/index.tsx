@@ -1,12 +1,5 @@
-/* import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
-import { Link } from "react-router-dom"
-import "./styles.scss"
- */
 import { Card as MaterialCard } from '@mui/material';
-
-
 import { Typography } from "@mui/material";
-import { Container } from "@mui/system";
 import { Link } from 'react-router-dom';
 import styled from "styled-components"
 import "./styles.scss"

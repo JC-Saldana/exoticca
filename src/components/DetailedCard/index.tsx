@@ -14,10 +14,13 @@ export default function DetailedCard() {
     const [suggestedCards, setSuggestedCards] = useState([])
 
     useEffect(() => {
-        const filteredCards = [
+        const filteredCards: any = [
             ...cardsData.ca.cardsData[0].cards,
+            ...cardsData.ca.topSales.cards,
             ...cardsData.uk.cardsData[0].cards,
+            ...cardsData.uk.topSales.cards,
             ...cardsData.us.cardsData[0].cards,
+            ...cardsData.us.topSales.cards,
         ].filter(card => card.destination.includes(destination))
         setSuggestedCards(filteredCards)
     }, [id, cardsData])
@@ -32,7 +35,7 @@ export default function DetailedCard() {
             </Typography>
             <p>{destination}</p>
             <p><sub>Id: {id}</sub></p>
-            <h3>Cards with same destination: </h3>
+            <h3>Offers with same destination: </h3>
             {suggestedCards.length ? <Cards cards={suggestedCards} isLoading={isLoading} /> :
                 <h5>No cards with same destination</h5>}
         </Container>
