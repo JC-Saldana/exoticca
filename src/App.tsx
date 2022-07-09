@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import DetailedCard from "./components/DetailedCard"
 import Home from "./layouts/Home"
-import Cards from "./layouts/Cards"
 import "./index.scss"
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
        <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-       {/*    <Route path="/test/:param" element={<Component />} /> */}
+          <Route path="/DetailedCard/:id/:destination/:title" element={<DetailedCard />} />
         </Routes>
       </BrowserRouter>
     </div>

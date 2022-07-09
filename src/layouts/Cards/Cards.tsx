@@ -22,9 +22,7 @@ export default function Cards({ cards, isLoading }: Props) {
             {(!isLoading && cards) ?
                 <CustomCarousel>
                     {cards.map((card: CardInterface, i: number) => (
-                        
-                            <Card key={card.id} card={card} />
-                        
+                        <Card key={card.id} card={card} />
                     ))}
                 </CustomCarousel>
                 :
