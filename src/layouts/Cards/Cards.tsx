@@ -6,45 +6,30 @@ import { RootState } from "../../main";
 import Card from "../../components/Card";
 import { Container } from "@mui/system";
 import CustomCarousel from "../../components/CustomCarousel";
-import "./styles.scss"
+import { Carousel } from "@trendyol-js/react-carousel";
 
 interface Props {
-    country: string;
+    cards: [];
+    isLoading: boolean;
 }
 
-export default function Cards({ country }: Props) {
-
-    const { isLoading, cardsData } = useSelector((state: RootState) => state.cards)
-    const [cards, setCards] = useState({ cardsData: [], topSales: [] })
+export default function Cards({ cards, isLoading }: Props) {
 
     //const matches = useMediaQuery("(min-width:1200px)")
-
-    useEffect(() => {
-        setCards(cardsData[country])
-    }, [cardsData, country])
-
-    useEffect(() => {
-        console.log("cards", cards)
-    }, [cards])
-
+    console.log("cardsss", cards)
     return (
-        <Container maxWidth="xl">
-            <div className="cards-container">
-                <Typography variant="h3" component="h3" color={"#fff"}>
-                    TopSales {country}
-                </Typography>
-                {(!isLoading && cards?.cardsData[0]?.cards) ?
-                    <CustomCarousel>
-                        {cards.cardsData[0].cards.map((card: CardInterface, i: number) => (
-                            <Grid key={card.id} item xs={6} sm={4} md={3}>
-                                <Card card={card} />
-                            </Grid>
-                        ))}
-                    </CustomCarousel>
-                    :
-                    <CircularProgress />
-                }
-            </div>
-        </Container>
+        <>
+            {(!isLoading && cards) ?
+                <CustomCarousel>
+                    {cards.map((card: CardInterface, i: number) => (
+                        
+                            <Card key={card.id} card={card} />
+                        
+                    ))}
+                </CustomCarousel>
+                :
+                <CircularProgress />
+            }
+        </>
     )
 }

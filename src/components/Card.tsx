@@ -23,7 +23,8 @@ export const CardContent = styled.button`
 `
 
 export default function Card({ card }: Props) {
-    const { id, destination, days, title, priceDetail: { fromPriceBeautify, oldPriceBeautify, pricingPercentaje }, images } = card
+    const { id, destination, days, title, priceDetail: { fromPriceBeautify, oldPriceBeautify, pricingPercentage }, images } = card
+    console.log("card", card)
     return (
         <MaterialCard className='card-container'>
             <CardContent>
@@ -35,11 +36,14 @@ export default function Card({ card }: Props) {
                     <Typography className="days" variant="body2" component="h6">
                         {days} Days
                     </Typography>
+                    <Typography className="percentage" variant="body2" component="h6">
+                        -<strong>{pricingPercentage}</strong>%
+                    </Typography>
                 </div>
                 <div className="card-footer">
                     <p className="title">{title}</p>
                     <p className="title">
-                        From <s><strong>{oldPriceBeautify}</strong></s> <strong className="actual-price">{fromPriceBeautify}</strong>
+                        From <s><strong className='from'>{oldPriceBeautify}</strong></s> <strong className="actual-price">{fromPriceBeautify}</strong>
                     </p>
                 </div>
                 {/* <Link to={`/DetailedCharacter/${id}`} style={{ textDecoration: "none", color: "black" }}>

@@ -7,7 +7,7 @@ import ca from "../mocks/ca.json"
 export const getCards = () => async (dispatch: any) => {
     try {
         dispatch({ type: START_LOADING })
-        // fetch info should be retrieved here, but mocked info was used instead
+        // fetch info should be retrieved here, but mocked info was used instead. CORS access is needed
         //const { data } = await fetchCards();
         const data = {
             us: {

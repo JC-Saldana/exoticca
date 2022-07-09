@@ -20,6 +20,7 @@ export default function CustomCarousel({ children }: Props) {
             slide={1}
             transition={0.8}
             swiping={true}
+            dynamic={true}
             leftArrow={rightArrow}
             rightArrow={rightArrow}>
             {children}
