@@ -20,7 +20,6 @@ export default function CountrySelect({ country, setCountry }: Props) {
             <h1 className='cards-title'>TopSales {country}</h1>
             <div className="form-control">
                 <FormControl>
-
                     <InputLabel id="demo-simple-select-label">Country</InputLabel>
                     <Select
                         labelId="demo-simple-select-label"

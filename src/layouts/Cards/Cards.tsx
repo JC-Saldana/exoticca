@@ -4,12 +4,12 @@ import Card from "../../components/Card";
 import CustomCarousel from "../../components/CustomCarousel";
 
 interface Props {
-    cards: [];
+    cards: [CardInterface];
     isLoading: boolean;
 }
 
 export default function Cards({ cards, isLoading }: Props) {
-
+    
     return (
         <>
             {(!isLoading && cards) ?

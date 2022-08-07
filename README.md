@@ -1,5 +1,6 @@
 # Exoticca technical test 
 How to use: run "npm run dev" in the root folder, then open http://localhost:3000/ in your chosen explorer.
+CORS chrome extension needs to be activated
 
 Found this header :D -> x-recruitment: Cool developers inside, but we need some more. Contact us at talent@exoticca.com and mention this header.
 
